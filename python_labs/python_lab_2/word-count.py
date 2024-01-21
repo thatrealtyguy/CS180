@@ -6,7 +6,7 @@ import os
 def main(inputString):
     # Write the code to count the number of words here
     # Remember to save the dictionary as a json file named "word-counts.json"
-    inputString = inputString.replace(string.punctuation, '')
+    inputString = inputString.translate(str.maketrans('', '', string.punctuation))
     inputString = inputString.lower()
 
     output_dict = {'notaword': 1}
@@ -30,6 +30,7 @@ def main(inputString):
             space_bool = False
 
     del output_dict['notaword']
+    print(output_dict)
     return output_dict
 
 if __name__ == "__main__":
