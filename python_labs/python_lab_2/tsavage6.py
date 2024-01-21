@@ -46,7 +46,7 @@ def main(inputString):
     
     # Write dictionary to json file
     with open('word-counts.json', 'w') as f:
-        json.dump(output_dict, f)
+        json.dump(output_dict, f, indent = 0)
 
     return f
 
