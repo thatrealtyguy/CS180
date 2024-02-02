@@ -18,7 +18,9 @@ def main(array):
     variance = sum_var/len(array)
     output = 'mean = ' + str(mean) + "\n" + 'variance = ' + str(variance)
 
-    return print(output)
+    print(output)
+
+    return output
 
 if __name__ == "__main__":
     argParse = ap.ArgumentParser("Variance and Mean Calculator")
