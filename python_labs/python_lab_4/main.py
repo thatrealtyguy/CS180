@@ -3,8 +3,22 @@ import argparse as ap
 def main(array):
     # Write the compute the variance and the mean of a given list of numbers
     # Make sure that your terminal output matches the terminal output of the example given on the instructions.
+    sum = 0
+    sum_var = 0
 
-    return None
+    for num in array:
+        sum += num
+    mean = sum / len(array)
+
+    for num in array:
+        var = num - mean
+        var = var * var
+        sum_var += var
+
+    variance = sum_var/len(array)
+    output = 'mean = ' + str(mean) + "\n" + 'variance = ' + str(variance)
+
+    return print(output)
 
 if __name__ == "__main__":
     argParse = ap.ArgumentParser("Variance and Mean Calculator")
