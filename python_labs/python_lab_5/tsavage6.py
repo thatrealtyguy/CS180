@@ -8,6 +8,7 @@ def main(inputString):
     for char in inputString[::-1]:
         output = output + char
 
+    print(output)
     return output
 
 if __name__ == "__main__":
